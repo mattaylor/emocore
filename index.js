@@ -1,5 +1,5 @@
 /* Cortex WebRTC Client */
-if 
+if (typeof module == 'object') var WebSocket = require('ws')
 
 class Cortex {
 
@@ -146,7 +146,4 @@ function polySocket(socket) {
   if (socket.send) return wSocket(socket)  //socket is W3C WebSocket
 }
 
-if (typeof module == 'object') {
-	WebSocket = require('ws')
-	module.exports = Cortex
-}
+if (typeof module == 'object') module.exports = Cortex
