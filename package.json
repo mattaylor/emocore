@@ -1,0 +1,22 @@
+{
+  "name": "emocore",
+  "version": "1.0.3",
+  "description": "nodejs required",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattaylor/emocore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattaylor/emocore/issues"
+  },
+  "homepage": "https://github.com/mattaylor/emocore#readme",
+  "dependencies": {
+    "ws": "^3.0.0"
+  }
+}

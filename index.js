@@ -7,7 +7,7 @@ class Cortex {
     Object.assign(this, { opts:opts, api:{}, _rpc:{}, _sub:{}, queue:[]})
     //if (opts.socket) this.sock = polySocket(opts.socket)
     if (opts.socket) this.sock = opts.socket
-    else this.sock = new WebSocket('ws://'+(opts.host||'localhost')+':'+(opts.port||8000))
+    else this.sock = new WebSocket('ws://'+(opts.host||'localhost')+':'+(opts.port||54321))
     this.sock.onopen = () => this.queue.map(_ => this.sock.send(JSON.stringify(this.queue.shift())))
     if (opts.client_id) this.auth(opts)
     this.call('inspectApi')
